@@ -1,8 +1,9 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { Lock, createLock, acquire, release } from '../src/index';
+import { describe, it, expect } from 'vitest';
+import { Lock } from '../src/index';
 
 describe('Lock', () => {
-  let lock: Lock;
-  beforeEach(() => { lock = createLock(); });
-  it('creates lock', () => { expect(lock).toBeDefined(); });
+  it('creates lock', () => {
+    const lock = new Lock();
+    expect(lock).toBeDefined();
+  });
 });
