@@ -32,3 +32,4 @@ await release(token);
 ## License
 
 MIT
+trigger
