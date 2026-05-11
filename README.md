@@ -7,17 +7,27 @@
 
 ## Install
 
-\`\`\`bash
+```bash
 npm install @creadev.org/lock
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`typescript
-import { } from '@creadev.org/lock';
+```typescript
+import { Lock, createLock, acquire, release } from '@creadev.org/lock';
 
-// ...
-\`\`\`
+const lock = createLock();
+const token = await acquire('resource');
+await release(token);
+```
+
+## API
+
+| Function | Description |
+|----------|-------------|
+| `createLock(options?)` | Create lock instance |
+| `acquire(resource)` | Acquire lock |
+| `release(token)` | Release lock |
 
 ## License
 
